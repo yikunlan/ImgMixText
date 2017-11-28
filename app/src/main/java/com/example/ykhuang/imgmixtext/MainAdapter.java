@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.ykhuang.imgmixtext.note.bean.NoteBean;
+import com.example.ykhuang.imgmixtext.note.bean.NoteData;
 
 import java.util.List;
 
@@ -17,10 +17,10 @@ import java.util.List;
  */
 
 public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MyViewHolder> {
-    private List<NoteBean> mList;
+    private List<NoteData> mList;
     private Context mContext;
 
-    public MainAdapter(Context context, List<NoteBean> list){
+    public MainAdapter(Context context, List<NoteData> list){
         this.mContext = context;
         this.mList = list;
     }
@@ -31,7 +31,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MyViewHolder> 
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, final int position) {
-        NoteBean noteBean = mList.get(position);
+        NoteData noteBean = mList.get(position);
 
         holder.setOnclick(new View.OnClickListener() {
             @Override
@@ -39,11 +39,11 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MyViewHolder> 
                 mItemClickListener.onItemClick(position);
             }
         });
-        if(!TextUtils.isEmpty(noteBean.title)){
-            holder.tv_title.setText(noteBean.title);
+        if(!TextUtils.isEmpty(noteBean.getTitle())){
+            holder.tv_title.setText(noteBean.getTitle());
         }
-        if(!TextUtils.isEmpty(noteBean.content)){
-            holder.tv_content.setText(noteBean.content);
+        if(!TextUtils.isEmpty(noteBean.getContent())){
+            holder.tv_content.setText(noteBean.getContent());
         }
     }
 
