@@ -47,4 +47,7 @@ dependencies {
     //引入rxjava
     compile 'io.reactivex:rxjava:1.1.0'
     compile 'io.reactivex:rxandroid:1.1.0'
+
+    //图片选择框架   https://github.com/donglua/PhotoPicker
+    compile 'me.iwf.photopicker:PhotoPicker:0.9.10@aar'
 }

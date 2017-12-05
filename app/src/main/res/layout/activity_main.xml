@@ -10,7 +10,8 @@
         android:layout_width="368dp"
         android:layout_height="48dp"
         tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="8dp">
+        tools:layout_editor_absoluteX="8dp"
+        android:gravity="center_vertical">
         <TextView
             android:id="@+id/tv_center"
             android:layout_width="wrap_content"
@@ -21,7 +22,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"/>
+            android:layout_centerVertical="true"
+            android:background="#dddddd"
+            android:padding="10dp"
+            android:text="新建"/>
 
     </RelativeLayout>
 
