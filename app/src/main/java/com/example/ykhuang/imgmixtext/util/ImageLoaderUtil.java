@@ -23,14 +23,15 @@ public class ImageLoaderUtil {
      * @param imageView
      */
     public static void setUrlToGlide(Context context,int placeId, String url, ImageView imageView) {
-        Glide.with(context)
-            .load(url)
-            .placeholder(placeId)
-             .error(placeId)
-            .crossFade()
-            .dontAnimate()
-            .diskCacheStrategy(DiskCacheStrategy.SOURCE)
-            .into(imageView);
+        Glide.with(context).load(url).into(imageView);
+//        Glide.with(context)
+//            .load(url)
+//            .placeholder(placeId)
+//             .error(placeId)
+//            .crossFade()
+//            .dontAnimate()
+//            .diskCacheStrategy(DiskCacheStrategy.SOURCE)
+//            .into(imageView);
     }
 
 }

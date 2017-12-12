@@ -34,7 +34,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
-    compile 'com.github.bumptech.glide:glide:3.8.0'
     compile 'com.jakewharton.rxbinding:rxbinding-recyclerview-v7:1.0.1'
     testCompile 'junit:junit:4.12'
 
@@ -48,6 +47,12 @@ dependencies {
     compile 'io.reactivex:rxjava:1.1.0'
     compile 'io.reactivex:rxandroid:1.1.0'
 
-    //图片选择框架   https://github.com/donglua/PhotoPicker
+    //图片选择框架   https://github.com/donglua/PhotoPicker,
     compile 'me.iwf.photopicker:PhotoPicker:0.9.10@aar'
+
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:recyclerview-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.github.bumptech.glide:glide:4.1.1'
 }

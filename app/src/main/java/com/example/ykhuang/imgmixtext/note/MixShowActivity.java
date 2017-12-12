@@ -1,5 +1,6 @@
 package com.example.ykhuang.imgmixtext.note;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +12,7 @@ import com.example.ykhuang.imgmixtext.R;
 import com.example.ykhuang.imgmixtext.note.bean.NoteData;
 import com.example.ykhuang.imgmixtext.widget.ImgMixTxtShowView;
 
-public class MixShowActivity extends AppCompatActivity {
+public class MixShowActivity extends Activity {
     public static final String NOTE_BEAN= "note_bean";
 
     private TextView note_title;

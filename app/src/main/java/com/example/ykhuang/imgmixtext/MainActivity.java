@@ -1,5 +1,6 @@
 package com.example.ykhuang.imgmixtext;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -24,7 +25,7 @@ import rx.Observable;
 import rx.Observer;
 import rx.Subscriber;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends Activity implements View.OnClickListener {
     final int NOTIFY_DATA=0x001;
 
     TextView tv_right;
@@ -32,8 +33,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //把这个作为编辑后数据保存的位置
     public List<NoteData> mDataList;
     private MainAdapter mAdapter;
-    TextView tv_add_data;
-    TextView tv_notify_data;
 
     private NoteData mNoteData;
 
@@ -100,10 +99,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 MixShowActivity.open(MainActivity.this,mDataList.get(position));
             }
         });
-        tv_add_data = (TextView) findViewById(R.id.tv_add_data);
-        tv_add_data.setOnClickListener(this);
-        tv_notify_data = (TextView) findViewById(R.id.tv_notify_data);
-        tv_notify_data.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
@@ -112,7 +107,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 EditNoteActivity.open(this);
                 break;
 
-            case R.id.tv_add_data:
 //                mNoteData = new NoteData();
 //                mNoteData.setTitle("淡写年华");
 //                mNoteData.setContent(" 许我们的心里藏有一个海洋，流出来的却是两行清泪，可我并不感到孤单，我只是简单地喜欢书写凄凉。曾经我们敷衍的情绪，在别人记忆的曲线里渐行渐远渐无言。难道曾经的悸动，只是岁月留给我一个人的错觉，我有点不相信自己的眼睛。我没有哭泣，只是学会了思念而已。" +
@@ -133,14 +127,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                    }
 //                }).start();
 //
-
-
-                break;
-            case R.id.tv_notify_data:
-
-
-
-                break;
             default:
         }
     }
