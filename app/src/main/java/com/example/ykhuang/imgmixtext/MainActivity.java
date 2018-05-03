@@ -27,7 +27,6 @@ import rx.Subscriber;
 
 public class MainActivity extends Activity implements View.OnClickListener {
     final int NOTIFY_DATA=0x001;
-
     TextView tv_right;
     RecyclerView rcv;
     //把这个作为编辑后数据保存的位置
